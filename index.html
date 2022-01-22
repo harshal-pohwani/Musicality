@@ -1,0 +1,192 @@
+<!-- https://cdn-icons-png.flaticon.com/128/4028/4028568.png -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicality</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 120%;
+    }
+
+    .container {
+        margin: auto;
+        margin-top: 2rem;
+        height: 35rem;
+        width: 29%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(219, 241, 241, 0.637);
+        box-shadow: 0 10px 10px 5px rgb(138, 147, 172);
+    }
+
+    .name {
+        width: 100%;
+        font-weight: 100;
+        letter-spacing: 2px;
+        text-align: center;
+        text-shadow: 2px 3px 1px rgba(192, 182, 182, 0.685);
+    }
+
+    #artist {
+        color: rgb(71, 70, 70);
+    }
+
+    .image {
+        height: 42%;
+        width: 60%;
+        
+    }
+
+    .image img {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    .controls {
+        display: flex;
+        width: 70%;
+        height: 15%;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        color: black;
+        filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+    }
+
+    .fas:hover {
+        color: grey;
+    }
+
+    #play {
+        width: 15%;
+        height: 51%;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #play:hover {
+        background-color: whitesmoke;
+        color: black;
+        box-shadow: 10px 8px 4px rgba(0, 0, 0, 0.404);
+    }
+
+    .anime {
+        animation: rotate 5s linear infinite;
+    }
+
+    @media (max-width : 320px) {
+        .container {
+            height: 88vh;
+            width: 90%;
+        }
+
+        .image {
+            width: 59%;
+            height: 35%;
+        }
+
+        #play {
+            height: 47%;
+            width: 17%;
+        }
+    }
+
+    @media (max-width : 375px) and (min-width :321px) {
+        .container {
+            height: 88vh;
+            width: 90%;
+        }
+
+        .image {
+            width: 56%;
+            height: 38%;
+        }
+    }
+
+    @media (max-width : 426px) and (min-width :376px) {
+        .container {
+            height: 88vh;
+            width: 80%;
+        }
+
+        .image {
+            width: 56%;
+            height: 40%;
+        }
+
+        #play {
+            width: 14%;
+            height: 48%;
+        }
+    }
+
+    @media (max-width : 768px) and (min-width : 427px) {
+        .container {
+            width: 45%;
+            height: 90vh;
+        }
+        .image {
+            width: 56%;
+            height: 39%;
+        }
+    }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+</style>
+
+<body>
+    <div class="container">
+        <div class="name">
+            <h1 id="title">Perfect</h1>
+            <h4 id="artist">Ed Sheeran</h4>
+        </div>
+        <div class="image">
+            <img id="imag"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Ed_Sheeran_Perfect_Single_cover.jpg/220px-Ed_Sheeran_Perfect_Single_cover.jpg">
+        </div>
+        <audio src="Perfect Ed Sheeran.mp3"></audio>
+        <div class="controls">
+            <i class="fas fa-backward" id="previous" title="Previous"></i>
+            <i class="fas fa-play" id="play" title="Play"></i>
+            <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+    </div>
+    <script src="player.js"></script>
+</body>
+
+</html>
